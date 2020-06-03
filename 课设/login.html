@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <title>董文辉</title>
+    <link rel="short icon" href="Resource/icon.png">
+    <link rel="stylesheet" href="Test.css">
+    <script type="text/javascript" src="CommonClass.js"></script>
+    <style>
+        img{
+            margin-top: 50px;
+        }
+        .nn {
+            padding-left: 15px;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        div input{
+            outline: medium;
+            background-color: transparent;
+            border: 0;
+        }
+        .tt{
+            width: 100%;
+            text-align: center;
+        }
+        .tt input{
+            height: 50px;
+            background: rgb(32, 90, 163);
+            width: 90%;
+            border-radius: 10px;
+            margin: 20px auto;
+            color: white;
+        }
+    </style>
+    <!--JS-->
+</head>
+<body>
+<header>
+    <span >登录</span>
+</header>
+
+<div style="text-align: center">
+    <img src="Resource/head.png">
+</div>
+<form>
+<div style="width: 90%;margin: 0 auto;background: white;border: 1px solid #cccccc;border-radius: 5px; margin-top: 30px;    height: 100px;">
+    <div class="nn" style="border-bottom: 1px solid #dddddd" >
+        <sapn>用户名:</sapn>
+        <input id="user" type="text" value="admin">
+    </div>
+    <div class="nn">
+        <sapn>用户名:</sapn>
+        <input id="pass" type="password" value="admin">
+    </div>
+</div >
+    <div  class="tt">
+        <input  type="button" value="登录" id="bnt">
+    </div>
+</form>
+<script>
+    var btn= document.getElementById("bnt");
+        btn.onclick = function () {
+            var userName = encodeURIComponent(document.getElementById("user").value);
+            var password = encodeURIComponent(document.getElementById("pass").value);
+            var par2 = "username=" + userName + "&pwd=" + password;
+            requestMethod('login', par2, 'post', function (returnStr) {
+                if (returnStr == "登录成功") {
+
+                    window.localStorage.setItem("userName", userName);
+
+                    location.href = "DropletService.html";
+                } else {
+                    alert(returnStr);
+                }
+            });
+        }
+
+</script>
+</body>
+</html>

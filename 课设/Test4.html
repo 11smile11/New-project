@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <title>董文辉</title>
+    <link rel="short icon" href="Resource/icon.png">
+    <link rel="stylesheet" href="Test.css">
+    <script type="text/javascript" src="CommonClass.js"></script>
+    <style>
+        article {
+            margin: 20px 20px;
+        }
+        h3{
+            color: red;
+            font-size: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dddddd;
+        }
+        h4{
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+            text-indent: 2em;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <span>平台风采</span>
+</header>
+<section class="new">
+    <img src="Resource/banner4.png" alt="">
+</section>
+<article>
+    <h3 id="1"></h3>
+    <h4 id="2"></h4>
+    <p id="3"></p>
+</article>
+<!--最下方-->
+<footer>
+    <a href="Test.html"><img src="Resource/nav10.png"> <span >小滴服务</span></a>
+    <a href="Test2.html"><img src="Resource/nav20.png"><span>服务流程</span></a>
+    <a href="Test3.html"><img src="Resource/nav30.png"><span>会员注册</span></a>
+    <a href="Test4.html"><img src="Resource/nav41.png"><span style="color: red">平台风采</span></a>
+    <a href="Test5.html"> <img src="Resource/nav50.png"><span >我的小滴</span></a>
+</footer>
+
+
+<script>
+    requestMethod('aboutus', "", 'get', function(returnStr){
+        var title_content = document.getElementById("1");
+        var subTitle_content = document.getElementById("2");
+        var info_content = document.getElementById("3");
+        title_content.innerHTML = returnStr.title;
+        subTitle_content.innerHTML = returnStr.subTitle;
+        info_content.innerHTML = returnStr.info;
+    });
+
+</script>
+</body>
+</html>

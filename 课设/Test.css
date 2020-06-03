@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin:0;
+}
+header{
+    color: white;
+    line-height: 44px;
+    font-size:18px;
+    background: rgb(40,133,202);
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1111;
+}
+.new img{
+    width: 100%;
+}
+
+body{
+    background: rgb(244,244,246);
+    padding-top:44px;
+    padding-bottom: 49px;
+}
+footer{
+    display: table;
+    width: 100%;
+    background: black;
+    bottom: 0;
+    left: 0;
+    height: 49px;
+    position: fixed;
+}
+footer a {
+    display:table-cell;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+
+}
+footer a span {
+    display: block;
+    color: white;
+}
+footer img{
+    display:table;
+    width: 20px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.test2{
+    display: table;
+    width: 100%;
+    background: #dddddd;
+}
+.test2 a{
+    display: table-cell;
+    width: 33.3%;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+}
+.test2 span{
+    color: black;
+}
+
+div {
+    display: block;
+}
+.BP_external_div {
+    background: white;
+}
+.BP_external_div img{
+    width: 100%;
+}
+.BP_external_div_sec img{
+    width: 100%;
+}
+.BP_external_div_sec ul{
+    font-size: 14px;
+    text-align: center;
+}
+.BP_external_div ul{
+    font-size: 14px;
+    text-align: center;
+}
+.BP_external_div p{
+    font-size: 10px;
+    color: gray;
+    text-indent: 2em;
+}
+.BP_external_div_sec p{
+    font-size: 10px;
+    color: gray;
+    text-indent: 2em;
+}
